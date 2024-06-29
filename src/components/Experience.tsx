@@ -7,7 +7,7 @@ export default function Experience() {
             year: "2023 - Present",
             name: "5G Software Developer",
             link: "https://www.ericsson.com/en",
-            description: "Develop integrated software solution combining existing telecommunication techniques with AI/ML.",
+            description: "Developed integrated software solution combining existing telecommunication techniques with AI/ML.",
             skills: ["C", "C++", "Python"]
         }
     ]
