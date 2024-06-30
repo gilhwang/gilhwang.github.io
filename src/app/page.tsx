@@ -1,5 +1,6 @@
 import Content from "@/components/Content";
 import Intro from "@/components/Intro";
+import Head from "next/head";
 
 export default function Home() {
   return (

@@ -16,12 +16,6 @@ const socialLinks = [
 ]
 
 export default function SocialLinks() {
-
-    /* Callback function to download resume as pdf */
-    function downloadResume() {
-        /* TODO: implement resume downloading feature */
-    }
-
     return (
         <div className="flex space-x-4">
                 <ul className="flex mt-5 space-x-3">
@@ -38,9 +32,10 @@ export default function SocialLinks() {
                 </ul>
                 <button 
                     className="px-6 py-2 mt-4 mr-4 sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:from-gray-400 hover:via-purple-400 hover:to-pink-400 text-white"
-                    onClick={downloadResume}
                 >
-                    Get Resume
+                    <a href="/files/Gil-Hwang-Resume.pdf" download="Gil-Hwang-Resume.pdf">
+                        Get Resume
+                    </a>
                 </button>
         </div>
     )
