@@ -19,6 +19,9 @@ export default function ExperienceItem({year, name, company, link, description, 
                         </span>
                     </a>    
                 </h3>
+                <h3 className="font-medium leading-snug text-slate-300">
+                    {company}
+                </h3>
                 <p className="mt-2 text-base leading-normal text-slate-400">
                     {description}
                 </p>
