@@ -15,7 +15,20 @@ export default function ExperienceItem({year, name, company, link, description, 
                     >
                         <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"/>
                         <span>
-                            {name}
+                            {name} 
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="24" 
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor"
+                                strokeLinecap="round" 
+                                strokeLinejoin="round"
+                                className="inline-block ml-1 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x1-1 motion-reduce:transition-none translate-y-px"
+                            >
+                                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                            </svg>
                         </span>
                     </a>    
                 </h3>
