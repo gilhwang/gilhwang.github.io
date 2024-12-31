@@ -2,6 +2,7 @@
   import Step from "./Step.svelte";
 
   let socialMediaLink = "https://www.linkedin.com/in/gil-hwang/";
+  export let data;
 
   let steps = [
     { name: "AI GPU Optimization", icon: "fa-solid fa-microchip" },
@@ -53,7 +54,7 @@
     <div class="relative shadow-2xl grid place-items-center">
       <img
         src={"images/profile.png"}
-        alt="Profile image"
+        alt="Profie picture"
         class="object-cover z-[2] max-h-[70vh] rounded-full border-4 border-white"
       />
     </div>
@@ -74,15 +75,11 @@
       <p>Watch the video</p>
     </a>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-      <Step step={steps[0]}>
-        <p>
-          AI GPU Optimizaiton project is bla bla bla with <strong
-            class="text-violet-400">NVIDIA GPU & CUDA</strong
-          >
-        </p>
-      </Step>
-      <Step step={steps[1]}>Project B is bla bla bla with Python</Step>
-      <Step step={steps[2]}>Project C is bla bla bla with C++</Step>
+      {#each data.posts as post}
+        <Step step={post}>
+          <p class="description">{post.description}</p>
+        </Step>
+      {/each}
     </div>
   </section>
   <section

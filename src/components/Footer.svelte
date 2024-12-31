@@ -15,7 +15,7 @@
         target="_blank"
         href="https://github.com/gilhwang"
       >
-        gil_hwang<sup>
+        gilhwang<sup>
           <span class="text-xs scale-75 pl-0.5">
             <i
               class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"
