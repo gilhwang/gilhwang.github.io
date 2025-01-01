@@ -64,6 +64,10 @@ li {
 		tab-size: 2;
 	}
 
+	h1, h2, h3, h4 {
+		line-height: 2rem;
+	}
+
 	h1 {
 		font-size: 2.5rem;
 		font-weight: bold;
