@@ -8,7 +8,7 @@
   <meta property="og:title" content={data.meta.title} />
 </svelete:head>
 
-<article class="article mb-5">
+<article class="article mb-5 px-5">
   <hgroup>
     <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl pb-5">
       {data.meta.title}
