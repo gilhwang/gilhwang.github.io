@@ -2,13 +2,10 @@
   import "../app.css";
   import Footer from "../components/Footer.svelte";
   import Header from "../components/Header.svelte";
-  import Transition from "./transition.svelte";
 
   let y;
   let innerHeight = 0;
   let innerWidth = 0;
-
-  export let data;
 
   function goTop() {
     document.body.scrollIntoView();
@@ -26,9 +23,13 @@
   >
     <button
       on:click={goTop}
+      aria-label="go top"
       class="ml-auto rounded-full bg-=slate-900 text-violet-400 px-3 sm:px-4 hover:bg-slate-800 curser-pointer"
     >
-      <i class="fa-solid fa-arrow-up grid place-items-center aspect-square" />
+      <i
+        aria-label="top arrow"
+        class="fa-solid fa-arrow-up grid place-items-center aspect-square"
+      ></i>
     </button>
   </div>
   <Header {y} />

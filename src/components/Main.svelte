@@ -54,7 +54,7 @@
     <div class="relative shadow-2xl grid place-items-center">
       <img
         src={"images/profile.png"}
-        alt="Profie picture"
+        alt="My profile img"
         class="object-cover z-[2] max-h-[70vh] rounded-full border-4 border-white"
       />
     </div>
