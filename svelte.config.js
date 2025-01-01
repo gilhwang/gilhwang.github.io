@@ -1,5 +1,4 @@
 import adapter from '@sveltejs/adapter-static';
-import url from '$;lib/config'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 import {escapeSvelte, mdsvex} from 'mdsvex'
@@ -26,10 +25,7 @@ const config = {
   extensions: ['.svelte', '.md'],
   preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
   kit: {
-    adapter: adapter(),
-    paths: {
-      base: url
-    }
+    adapter: adapter()
   }
 };
 export default config;

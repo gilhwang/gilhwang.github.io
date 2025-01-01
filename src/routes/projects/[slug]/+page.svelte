@@ -10,7 +10,7 @@
 
 <article class="article mb-5">
   <hgroup>
-    <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl">
+    <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl pb-5">
       {data.meta.title}
     </h1>
     <p class="font-semibold poppins text-gray-400">
@@ -18,7 +18,7 @@
     </p>
   </hgroup>
 
-  <div class="my-3 flex flex-wrap -m-1">
+  <div class="my-3 flex flex-wrap -m-1 mb-10">
     {#each data.meta.categories as category}
       <span
         class="m-1 flex flex-wrap justify-between items-center text-xs sm:text-sm bg-gray-200 dark:bg-gray-700 rounded px-4 py-2 font-bold leading-loose dark:text-gray-300"
