@@ -13,8 +13,8 @@
     <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl pb-5">
       {data.meta.title}
     </h1>
-    <p class="font-semibold poppins text-gray-400">
-      Published at {data.meta.date}
+    <p class="font-semibold text-lg sm:text-xl md:text-2xl">
+      From {data.meta.start_date} to {data.meta.end_date}
     </p>
   </hgroup>
 

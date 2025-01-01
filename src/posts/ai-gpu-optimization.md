@@ -1,37 +1,31 @@
 ---
 title: AI GPU Optimization
-description: bla bla bla
-date: '2023-4-14'
+description: Optimized an AI simulation algorithm using NVIDIA GPU 
+id: 1
 categories:
     - NVIDIA CUDA
     - C/C++
+    - Teamwork
 icon: fa-solid fa-microchip
+start_date: "April 2024"
+end_date: "Present"
 published: true
 ---
 
-# Big title
+# Overview
+This is 
 
-this is h1
+# Background
+aa
 
-## Medium title
+# Motivation
+aa
 
-this is h2
+# Technical Design
+aa
 
-### Small title
+# Result
+aa
 
-this is h3
-
-## Markdown
-
-hello ✌️
-
-## Svelte
-Media inside the **static** folder is served from `/`.
-
-![Svelte](../favicon.png)
-
-```ts
-function greet(name: string) {
-    console.log('Hey ${name}!')
-}
-```
+# Notes
+aa

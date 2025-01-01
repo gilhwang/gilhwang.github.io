@@ -1,24 +1,19 @@
 <script>
   import Step from "./Step.svelte";
 
-  let socialMediaLink = "https://www.linkedin.com/in/gil-hwang/";
+  const resumeLink =
+    "https://media.licdn.com/dms/document/media/v2/D562DAQFsiJQfjdirnQ/profile-treasury-document-pdf-analyzed/profile-treasury-document-pdf-analyzed/0/1732397040449?e=1736380800&v=beta&t=QcFoOWnPnRXjjhM7XqInXocQp2Yv9hpSYOTEBn03ijs";
   export let data;
 
-  let steps = [
-    { name: "AI GPU Optimization", icon: "fa-solid fa-microchip" },
-    { name: "Ultimate Todos", icon: "fa-solid fa-list-check" },
-    { name: "Poke", icon: "fa-solid fa-diagram-project" },
-  ];
-
   let benefits = [
-    { name: "a self taught developer", description: "aaaaaaaaaaaaaaaaaaaa" },
+    { name: "Ericsson", description: "software developer" },
     {
-      name: "a product design & UX finatic",
-      description: "bbbbbbbbbbbbbbbbbbbbb",
+      name: "University of Toronto Autonomous Rover Team (UTRA ART)",
+      description: "general memeber",
     },
     {
-      name: "an excellent communicator",
-      description: "ccccccccccccccccccccccccccccc",
+      name: "Republic of Korea Navy",
+      description: "Computer Technician",
     },
   ];
 </script>
@@ -33,14 +28,21 @@
     >
       <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl">
         Hi! I'm <span class="poppins text-violet-400">Gil</span> Hwang
-        <br />Software <span class="poppins text-violet-400">Developer</span>
       </h2>
+      <h3 class="font-semibold text-2xl sm:text-3xl md:text-4xl">I am...</h3>
+      <h3 class="font-base text-lg sm:text-xl md:text-2xl">
+        a Computer Engineering <span class="poppins text-violet-400"
+          >Student</span
+        >
+        at University of Toronto<br /> & Software
+        <span class="poppins text-violet-400">Developer</span> at Ericsson Canada
+      </h3>
       <p class="text-base sm:text-lg md:text-xl">
-        My <span class="text-violet-400">favorite tech</span> includes C, C++ and
-        Python
+        My <span class="text-violet-400">favorite tech</span> includes C/C++, Python,
+        CUDA and Artificial Intelligence
       </p>
       <a
-        href={socialMediaLink}
+        href={resumeLink}
         target="_blank"
         class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 cursor-pointer"
       >
@@ -48,7 +50,7 @@
           class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20
                     group-hover:translate-x-full z-0 duration-200"
         ></div>
-        <h4 class="relative z-9">Get in touch &rarr;</h4>
+        <h4 class="relative z-9">See Resume &rarr;</h4>
       </a>
     </div>
     <div class="relative shadow-2xl grid place-items-center">
@@ -60,20 +62,15 @@
     </div>
   </section>
   <section id="projects" class="py-20 lg:py-32 flex flex-col gap-24">
-    <div class="flex flex-col gap-2 text-center">
-      <h6 class="text-lg sm:text-xl md:text-2xl">A few of my projects.</h6>
+    <div
+      class="flex flex-col gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-700
+      after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-violet-700 py-7"
+    >
+      <h6 class="text-lg sm:text-xl md:text-2xl">What can I do?</h6>
       <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-        Curious to <span class="poppins text-violet-400">see</span> my work?
+        My <span class="poppins text-violet-400">Projects</span>
       </h3>
     </div>
-    <a
-      href="https://www.google.com"
-      target="_blank"
-      class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-violet-700 duration-200"
-    >
-      <i class="fa-regular fa-circle-play"></i>
-      <p>Watch the video</p>
-    </a>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
       {#each data.posts as post}
         <Step step={post}>
@@ -88,11 +85,11 @@
   >
     <div
       class="flex flex-col gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-700
-      after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-violet-700 py-4"
+      after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-violet-700 py-7"
     >
-      <h6 class="text-lg sm:text-xl md:text-2xl">Want to know more?</h6>
+      <h6 class="text-lg sm:text-xl md:text-2xl">What did I do?</h6>
       <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-        A bit <span class="poppins text-violet-400">about</span> me
+        My <span class="poppins text-violet-400">Experience</span>
       </h3>
     </div>
     <p class="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">

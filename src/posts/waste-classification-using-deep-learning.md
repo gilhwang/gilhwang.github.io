@@ -1,10 +1,12 @@
 ---
 title: Waste Classification using Deep Learning
-description: bla bla bla
-date: '2023-3-14'
+description: Developed a deep learning model that classifies waste images into categories
+id: 2
 categories:
     - Python
 icon: fa-solid fa-diagram-project
+start_date: "January 2020"
+end_date: "April 2020"
 published: true
 ---
 
