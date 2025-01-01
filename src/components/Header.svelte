@@ -15,8 +15,8 @@
       : " py-6 bg-transparent border-transparent")}
 >
   <a href="/">
-    <h1 class="font-medium">
-      <b font="font-bold poppins">Gil</b> Hwang
+    <h1 class="text-4xl lg:text-3xl md:text-4xl sm:text-5xl">
+      <b font="font-bold poppins">GH</b>
     </h1>
   </a>
   <div class="sm:flex ml-auto pr-4 items-center gap-4 hidden">
