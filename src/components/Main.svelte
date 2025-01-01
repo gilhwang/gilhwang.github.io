@@ -1,8 +1,7 @@
 <script>
   import Step from "./Step.svelte";
 
-  const resumeLink =
-    "https://media.licdn.com/dms/document/media/v2/D562DAQFsiJQfjdirnQ/profile-treasury-document-pdf-analyzed/profile-treasury-document-pdf-analyzed/0/1732397040449?e=1736380800&v=beta&t=QcFoOWnPnRXjjhM7XqInXocQp2Yv9hpSYOTEBn03ijs";
+  const resumeLink = "assets/resume.pdf";
   export let data;
 
   let benefits = [
@@ -42,8 +41,8 @@
         CUDA and Artificial Intelligence
       </p>
       <a
-        href={resumeLink}
         target="_blank"
+        href={resumeLink}
         class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 cursor-pointer"
       >
         <div
