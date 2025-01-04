@@ -11,7 +11,20 @@
   <div class="flex flex-col gap-4 items-center justify-center">
     <h2>
       <i class="fa-regular fa-envelope"></i>
-      <b class="pr-2">Email</b> il.hwang@mail.utoronto.ca
+      <b class="pr-2">Email</b>
+      <a
+        class="text-violet-400"
+        target="_blank"
+        href="mailto:il.hwang@mail.utoronto.ca"
+      >
+        il.hwang@mail.utoronto.ca<sup>
+          <span class="text-xs scale-75 pl-0.5">
+            <i
+              class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]"
+            ></i>
+          </span></sup
+        >
+      </a>
     </h2>
     <h2>
       <i class="fa-brands fa-github"></i>
@@ -48,6 +61,6 @@
       </a>
     </h2>
   </div>
-  <h2 class="justify-center">Built with Sveltekit, Tailwind CSS and MDsveX</h2>
+  <h2>Built with Sveltekit, Tailwind CSS and MDsveX</h2>
   <h2>&copy; {year} Gil Hwang. All rights are reserved.</h2>
 </footer>
