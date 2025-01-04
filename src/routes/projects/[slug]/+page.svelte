@@ -21,7 +21,7 @@
   <div class="my-3 flex flex-wrap -m-1 mb-10">
     {#each data.meta.categories as category}
       <span
-        class="m-1 flex flex-wrap justify-between items-center text-xs sm:text-sm bg-gray-200 dark:bg-gray-700 rounded px-4 py-2 font-bold leading-loose dark:text-gray-300"
+        class="m-1 flex flex-wrap justify-between items-center text-sm sm:text-base bg-gray-200 dark:bg-gray-700 rounded px-4 py-2 font-bold leading-loose dark:text-gray-300"
         >{category}</span
       >
     {/each}

@@ -94,11 +94,22 @@ li {
 		font-size: 1.3rem;
 		padding-bottom: 1rem;
 		margin-bottom: 0.5rem;
+		line-height: normal;
 	}
 
 	ul, ol {
-		list-style: square;
 		padding-left: 1.5rem;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+		line-height: normal;
+	}
+
+	ul {
+		list-style: square;
+	}
+
+	ol {
+		list-style: value;
 	}
 
 	ul li, ol li {
@@ -109,5 +120,29 @@ li {
 
 	img {
 		padding: 0.5rem;
+	}
+
+	a {
+		color: aqua;
+	}
+
+	table {
+		@apply min-w-full divide-y divide-gray-200 dark:divide-neutral-700
+	}
+
+	table thead tr {
+		@apply divide-x divide-gray-200 dark:divide-neutral-700
+	}
+
+	table thead tr th {
+		@apply px-6 py-3 text-start text-lg sm:text-base md:text-lg font-medium text-gray-500 uppercase dark:text-neutral-500
+	}
+
+	table tbody {
+		@apply divide-y divide-gray-200 dark:divide-neutral-700
+	}
+	
+	table tbody tr td {
+		@apply px-6 py-4 whitespace-nowrap text-lg sm:text-base md:text-lg font-medium text-gray-800 dark:text-neutral-200	
 	}
 }

@@ -1,4 +1,6 @@
 <script>
+  import { page } from "$app/stores";
+
   export let y;
   let tabs = [
     { name: "Projects", link: "#projects" },
@@ -6,6 +8,7 @@
     // {name: 'Blog', '#projects'},
   ];
   let socialMediaLink = "https://www.linkedin.com/in/gil-hwang/";
+  $: isHomePage = $page.url.pathname === "/";
 </script>
 
 <header
@@ -20,11 +23,13 @@
     </h1>
   </a>
   <div class="sm:flex ml-auto pr-4 items-center gap-4 hidden">
-    {#each tabs as tab, index}
-      <a href={tab.link} class="duration-200 hover:text-violet-400">
-        <p>{tab.name}</p>
-      </a>
-    {/each}
+    {#if isHomePage}
+      {#each tabs as tab, index}
+        <a href={tab.link} class="duration-200 hover:text-violet-400">
+          <p>{tab.name}</p>
+        </a>
+      {/each}
+    {/if}
     <a
       href={socialMediaLink}
       class="blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950"
