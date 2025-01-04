@@ -48,6 +48,6 @@
       </a>
     </h2>
   </div>
-  <h2>Built with Sveltekit, Tailwind CSS and MDsveX</h2>
+  <h2 class="justify-center">Built with Sveltekit, Tailwind CSS and MDsveX</h2>
   <h2>&copy; {year} Gil Hwang. All rights are reserved.</h2>
 </footer>
