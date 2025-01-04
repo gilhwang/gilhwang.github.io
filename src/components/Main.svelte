@@ -53,6 +53,29 @@
       endDate: "March 2022",
     },
   ];
+
+  let educations = [
+    {
+      name: "University of Toronto",
+      degree: "Bachelor of Applied Science, 4th Year",
+      year: "4th year",
+      major: "Computer Engineering",
+      minor: "Artificial Intelligence Engineering",
+      gpa: "3.90/4.0",
+      courses: [
+        "Software Design and Communication",
+        "Algorithms and Data Structures",
+        "Operating Systems",
+        "Applied Fundamentals of Deep Learning",
+        "Introduction to Machine Learning",
+      ],
+      startDate: "September 2018",
+      endDate: "Present",
+      altLogo: "uoft-logo",
+      logo: "images/logo/uoft_logo.png",
+      link: "https://www.engineering.utoronto.ca/",
+    },
+  ];
 </script>
 
 <main class="flex flex-col flex-1 p-4">
@@ -81,7 +104,7 @@
       <a
         target="_blank"
         href={resumeLink}
-        class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 cursor-pointer"
+        class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 cursor-pointer transition duration-200 hover:scale-105"
       >
         <div
           class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20
@@ -108,7 +131,7 @@
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
     {#each data.posts as post}
       <Step step={post}>
-        <p class="description text-lg sm:text-base">
+        <p class="description text-lg sm:text-xl text-gray-300">
           {post.description}
         </p>
       </Step>
@@ -135,7 +158,7 @@
           </a>
 
           <div class="flex-col">
-            <h3 class="text-2xl sm:text-3xl md:text-3xl">
+            <h3 class="text-2xl sm:text-3xl">
               {experience.title}
             </h3>
             <h3 class="font-bold text-4xl sm:text-3xl md:text-4xl">
@@ -143,7 +166,7 @@
             </h3>
           </div>
         </div>
-        <h3 class="text-right text-2xl sm:xl md:2xl text-gray-300">
+        <h3 class="text-right text-2xl md:3xl text-gray-300">
           {experience.startDate} - {experience.endDate}
         </h3>
         <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
@@ -164,11 +187,14 @@
                   d="M1 5.917 5.724 10.5 15 1.5"
                 />
               </svg>
-              <span class="text-2xl sm:text-xl">{point}</span>
+              <span class="text-2xl sm:text-2xl">{point}</span>
             </li>
           {/each}
         </ul>
       </div>
+      {#if index < experiences.length - 1}
+        <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
+      {/if}
     {/each}
   </div>
 
@@ -178,4 +204,70 @@
     headingNoHighlight="My"
     headingHighlight="Education"
   ></Heading>
+
+  <div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">
+    {#each educations as education, index}
+      <div class="flex flex-col gap-6 sm:gap-8">
+        <div class="flex flex-row gap-3 sm:gap-5">
+          <a href={education.link} target="_blank">
+            <img
+              alt={education.altLogo}
+              src={education.logo}
+              class="size-24 min-w-24 min-h-24 sm:size-20 sm:min-w-20 sm:min-h-20 dark:shadow-gray-800 rounded-lg bg-white transition duration-500 hover:scale-110"
+            />
+          </a>
+
+          <div class="flex-col">
+            <h3 class="font-bold text-4xl sm:text-3xl md:text-4xl">
+              {education.name}
+            </h3>
+            <h3 class="text-3xl sm:text-2xl md:text-3xl">
+              {education.degree}
+            </h3>
+          </div>
+        </div>
+        <h3 class="text-right text-2xl sm:xl md:2xl text-gray-300">
+          {education.startDate} - {education.endDate}
+        </h3>
+        <h3 class="text-2xl sm:text-xl md:text-2xl">
+          <i class="fa-solid fa-graduation-cap"></i> Major in
+          <span class="poppins text-violet-400">{education.major}</span>
+        </h3>
+        <h3 class="text-2xl sm:text-xl md:text-2xl">
+          <i class="fa-solid fa-book"></i> Minor in
+          <span class="poppins text-violet-400">{education.minor}</span>
+        </h3>
+        <h3
+          class="poppins text-2xl pl-2 mt-2 border-l-4 font-bold border-teal-400 dark:text-gray-200"
+        >
+          Relevant Courses
+        </h3>
+        <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
+          {#each education.courses as course}
+            <li class="flex items-start space-x-3 rtl:space-x-reverse">
+              <svg
+                class="flex-shrink-0 size-7 sm:size-6 align-text-top text-green-500 dark:text-green-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 16 12"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5.917 5.724 10.5 15 1.5"
+                />
+              </svg>
+              <span class="text-2xl sm:text-2xl">{course}</span>
+            </li>
+          {/each}
+        </ul>
+      </div>
+      {#if index < educations.length - 1}
+        <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
+      {/if}
+    {/each}
+  </div>
 </main>

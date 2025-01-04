@@ -1,11 +1,14 @@
 <script>
   import "../app.css";
+  import { fade } from "svelte/transition";
   import Footer from "../components/Footer.svelte";
   import Header from "../components/Header.svelte";
 
   let y;
   let innerHeight = 0;
   let innerWidth = 0;
+
+  export let data;
 
   function goTop() {
     document.body.scrollIntoView();
@@ -32,9 +35,13 @@
       ></i>
     </button>
   </div>
-  <Header {y} />
-  <slot />
-  <Footer />
+  {#key data.url}
+    <div in:fade>
+      <Header {y} />
+      <slot />
+      <Footer />
+    </div>
+  {/key}
 </div>
 
 <svelte:window bind:scrollY={y} bind:innerHeight bind:innerWidth />
