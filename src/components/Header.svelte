@@ -4,7 +4,7 @@
   export let y;
   let tabs = [
     { name: "Projects", link: "#projects" },
-    { name: "About me", link: "#about" },
+    { name: "Experience", link: "#experience" },
     // {name: 'Blog', '#projects'},
   ];
   let socialMediaLink = "https://www.linkedin.com/in/gil-hwang/";

@@ -1,18 +1,56 @@
 <script>
+  import Heading from "./Heading.svelte";
   import Step from "./Step.svelte";
 
   const resumeLink = "assets/resume.pdf";
   export let data;
 
-  let benefits = [
-    { name: "Ericsson", description: "software developer" },
+  let experiences = [
     {
-      name: "University of Toronto Autonomous Rover Team (UTRA ART)",
-      description: "general memeber",
+      company: "Ericsson",
+      companyLink: "https://www.ericsson.com/en",
+      location: "Ottawa, ON, Canada",
+      title: "Software Developer Intern",
+      description: [
+        "Developed a Machine Learning prototype software using C++ that outperformed the current radio product",
+        "Developed a real-time AI model using Python that interacts bi-directionally with the current radio product, by utilizing both Reinforcement Learning and Deep Learning",
+        "Developed a simulation software using Python that trains a neural network model to perform QPSK demodulation, which outperforms the error rate of the current radio product",
+        "Verified reliability of the software by implementing unit tests using Google Test and conducting end-to-end test in a simulated environment",
+        "Presented an overview and the performance result of AI projects multiple times to both technical and non-technical audience, such as managers, developers and customers",
+        "Continuing to contribute to the currently involved projects as a part-time basis",
+      ],
+      logo: "images/logo/ericsson_logo.svg",
+      altLogo: "ericsson-logo",
+      startDate: "May 2023",
+      endDate: "Present",
     },
     {
-      name: "Republic of Korea Navy",
-      description: "Computer Technician",
+      company: "University of Toronto Autonomous Rover Team (UTRA ART)",
+      companyLink: "https://www.utra.ca/teams/ART/",
+      location: "Toronto, ON, Canada",
+      title: "General Member",
+      description: [
+        "Contributed into Computer Vision area of the autonomous rover using Python and PyTorch",
+        "Researched on the application of a pre-trained YOLOPv2 model on lane detection",
+      ],
+      logo: "images/logo/utra_logo.png",
+      altLogo: "utra-logo",
+      startDate: "August 2022",
+      endDate: "December 2022",
+    },
+    {
+      company: "Republic of Korea Navy",
+      companyLink: "https://www.navy.mil.kr/mbshome/mbs/eng/index.do",
+      location: "Republic of Korea",
+      title: "Computer Technician",
+      description: [
+        "Assisted satellite communication between warships by receiving and sending confidential military documents",
+        "Lead IT support team that troubleshoots general network, software and hardware issues such as network disruption and computer/printer malfunction",
+      ],
+      logo: "images/logo/navy_logo.png",
+      altLogo: "navy-logo",
+      startDate: "July 2020",
+      endDate: "March 2022",
     },
   ];
 </script>
@@ -60,58 +98,84 @@
       />
     </div>
   </section>
-  <section id="projects" class="py-20 lg:py-32 flex flex-col gap-24">
-    <div
-      class="flex flex-col gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-700
-      after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-violet-700 py-7"
-    >
-      <h6 class="text-xl sm:text-2xl md:text-3xl">What can I do?</h6>
-      <h3 class="font-semibold text-6xl sm:text-5xl">
-        My <span class="poppins text-violet-400">Projects</span>
-      </h3>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-      {#each data.posts as post}
-        <Step step={post}>
-          <p class="description text-lg sm:text-base">
-            {post.description}
-          </p>
-        </Step>
-      {/each}
-    </div>
-  </section>
-  <section
-    id="about"
-    class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"
-  >
-    <div
-      class="flex flex-col gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-700
-      after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-violet-700 py-7"
-    >
-      <h6 class="text-xl sm:text-2xl md:text-3xl">What did I do?</h6>
-      <h3 class="font-semibold text-6xl sm:text-5xl">
-        My <span class="poppins text-violet-400">Experience</span>
-      </h3>
-    </div>
-    <p class="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl">
-      I am . . .
-    </p>
-    <div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">
-      {#each benefits as benefit, index}
-        <div class="flex gap-6 sm:gap-8">
-          <p
-            class="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold"
-          >
-            0{index + 1}
-          </p>
-          <div class="flex flex-col gap-6 sm:gap-8">
-            <h3 class="text-2xl sm:text-3xl md:text-5xl">
-              {benefit.name}
+
+  <Heading
+    id="projects"
+    subheading="What can I do?"
+    headingNoHighlight="My"
+    headingHighlight="Projects"
+  ></Heading>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+    {#each data.posts as post}
+      <Step step={post}>
+        <p class="description text-lg sm:text-base">
+          {post.description}
+        </p>
+      </Step>
+    {/each}
+  </div>
+
+  <Heading
+    id="experience"
+    subheading="What did I do?"
+    headingNoHighlight="My"
+    headingHighlight="Experience"
+  ></Heading>
+
+  <div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">
+    {#each experiences as experience, index}
+      <div class="flex flex-col gap-6 sm:gap-8">
+        <div class="flex flex-row gap-3 sm:gap-5">
+          <a href={experience.companyLink} target="_blank">
+            <img
+              alt={experience.altLogo}
+              src={experience.logo}
+              class="size-24 min-w-24 min-h-24 sm:size-20 sm:min-w-20 sm:min-h-20 dark:shadow-gray-800 rounded-lg bg-white transition duration-500 hover:scale-110"
+            />
+          </a>
+
+          <div class="flex-col">
+            <h3 class="text-2xl sm:text-3xl md:text-3xl">
+              {experience.title}
             </h3>
-            <p>{benefit.description}</p>
+            <h3 class="font-bold text-4xl sm:text-3xl md:text-4xl">
+              {experience.company}
+            </h3>
           </div>
         </div>
-      {/each}
-    </div>
-  </section>
+        <h3 class="text-right text-2xl sm:xl md:2xl text-gray-300">
+          {experience.startDate} - {experience.endDate}
+        </h3>
+        <ul class="space-y-4 text-left text-gray-500 dark:text-gray-400">
+          {#each experience.description as point}
+            <li class="flex items-start space-x-3 rtl:space-x-reverse">
+              <svg
+                class="flex-shrink-0 size-7 sm:size-6 align-text-top text-green-500 dark:text-green-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 16 12"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5.917 5.724 10.5 15 1.5"
+                />
+              </svg>
+              <span class="text-2xl sm:text-xl">{point}</span>
+            </li>
+          {/each}
+        </ul>
+      </div>
+    {/each}
+  </div>
+
+  <Heading
+    id="education"
+    subheading="Where did I learn?"
+    headingNoHighlight="My"
+    headingHighlight="Education"
+  ></Heading>
 </main>
