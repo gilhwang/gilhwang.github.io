@@ -10,9 +10,11 @@
   </h2>
   <div class="flex flex-col gap-4 items-center justify-center">
     <h2>
+      <i class="fa-regular fa-envelope"></i>
       <b class="pr-2">Email</b> il.hwang@mail.utoronto.ca
     </h2>
     <h2>
+      <i class="fa-brands fa-github"></i>
       <b class="pr-2">GitHub</b>
       <a
         class="text-violet-400"
@@ -29,6 +31,7 @@
       </a>
     </h2>
     <h2>
+      <i class="fa-brands fa-linkedin"></i>
       <b class="pr-2">Linkedin</b>
       <a
         class="text-violet-400"
